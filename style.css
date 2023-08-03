@@ -6,3 +6,15 @@
     margin: 1.2em;
     padding: 2em;
 }
+
+div,p,h1,body{
+    padding:0px;
+    margin:0px;
+}
+
+
+.Sections{
+    width:100%;
+    margin:0em;
+    background-color: #e2e9f0;
+}
