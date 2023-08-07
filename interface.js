@@ -24,7 +24,15 @@ function clicker(thing){
 
 function projectHTML(){
     var html="";
-    html+="<table style='margin-left:auto;margin-right:auto'><tr><th><h1>Projects</h1></th><td>Section Information</td></tr></table>";
+    html+="<h1>Projects</h1><table style='margin-left:auto;margin-right:auto;border-spacing:0 15px'>"
+    html+="<tr><th style='width:120px;vertical-align:top'><h3>Pxl</h3></th>"
+    html+="<td style='width:300px'><p1>This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.</p1></td></tr>"
+    
+    html+="<tr><th style='width:120px;vertical-align:top'><h3>Pxl</h3></th>"
+    html+="<td style='width:300px'><p1>This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.</p1></td></tr>"
+
+    
+    html+="</table>";
 
     return html;
 }
