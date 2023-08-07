@@ -10,7 +10,7 @@
     margin-top: 20px;
 }
 
-div,p,h1,body{
+div,h1,p,body{
     padding:0px;
     margin:0px;
 }
@@ -27,6 +27,7 @@ div,p,h1,body{
 }
 
 .Sections{
+    min-height: 50px;
     cursor:pointer;
     width:100%;
     margin:auto;
