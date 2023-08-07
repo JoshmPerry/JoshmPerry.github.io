@@ -1,10 +1,10 @@
 .portrait {
+
     border-width: 3px;
     border-color: black;
     border-style: solid;
     width: auto;
     margin: 1.2em;
-    padding: 2em;
 }
 
 div,p,h1,body{
