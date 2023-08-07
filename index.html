@@ -1,19 +1,21 @@
 <header>
     <title>Josh Perry</title>
-    <meta name="description" content="Josh Perry's pitiful personal portfolio website">
+    <meta name="description" content="Perry's pitiful personal portfolio">
     <meta name="keywords" content="Josh Perry,Resume,dissapointment">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </header>
 <body>
     <div class="portrait">
-        <img src="drawables/JP-26.jpg" width="100%" alt="Josh Perry">
+        <img src="drawables/JP-26.jpg" style="border-radius: 30%" width="100%" alt="Josh Perry">
     </div>
-    <div class="Sections" id="Projects" expanded="true" onclick="clicker(this)">
-    </div>
-    <div class="Sections" id="Experience" expanded="true" onclick="clicker(this)">
-    </div>
-    <div class="Sections" id="Resume" expanded="true" onclick="clicker(this)">
+    <div class="SectionContainer">
+        <div class="Sections" style="border-top-left-radius:20px;border-top-right-radius:20px;" id="Projects" expanded="true" onclick="clicker(this)">
+        </div>
+        <div class="Sections" id="Experience" expanded="true" onclick="clicker(this)">
+        </div>
+        <div class="Sections" style="border-bottom-left-radius:20px;border-bottom-right-radius:20px;" id="Resume" expanded="true" onclick="clicker(this)">
+        </div>
     </div>
 
 
