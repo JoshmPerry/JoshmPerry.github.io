@@ -17,8 +17,5 @@ div,p,h1,body{
     width:100%;
     margin:0em;
     background-color: #e2e9f0;
-}
-
-.SectionTitles{
-
+    text-align:center;
 }
