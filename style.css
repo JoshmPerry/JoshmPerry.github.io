@@ -17,6 +17,10 @@ div,h1,p,body{
     margin:0px;
 }
 
+th, td {
+    padding-left:25px;
+}
+
 .SectionContainer{
     border-radius: 20px;
     border-width: 5px;
