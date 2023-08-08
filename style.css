@@ -1,13 +1,14 @@
 
 .portrait {
     border-radius:30%;
-    border-width: 3px;
+    border-width: 2px;
     border-color: black;
     background-color: black;
     border-style: solid;
     width: 500px;
     margin: auto;
     margin-top: 20px;
+    box-shadow: 1px 1px 5px 0px black;
 }
 
 div,h1,p,body{
@@ -20,7 +21,7 @@ div,h1,p,body{
     border-width: 5px;
     width:fit-content;
     margin:auto;
-    margin-top:20px;
+    margin-top:15px;
     margin-bottom:20px;
     background-color: #e2e9f0;
     box-shadow: 0px 0px 20px 5px #e2e9f0;
