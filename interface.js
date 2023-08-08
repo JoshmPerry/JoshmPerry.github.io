@@ -44,7 +44,7 @@ function projectHTML(){
     var html="";
     html+="<h1>Projects</h1><table style='margin-left:auto;margin-right:auto;border-spacing:0 15px'>"
 
-    html+="<tr><th style='width:120px;vertical-align:top'><h3>Mouseless Mouse</h3></th>"
+    html+="<tr><th style='width:120px;vertical-align:top'><h3>Mouseless Mouse</h3><a href='https://github.com/aggie-coding-club/mouseless-mouse'><img src='drawables/github-marks.svg' width='50' alt='Github'></a></th>"
     html+="<td style='width:300px'><p1>This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.This table will be full of a lot of text.</p1></td></tr>"
 
     html+="<tr><th style='width:120px;vertical-align:top'><h3>AggieBussin</h3></th>"
