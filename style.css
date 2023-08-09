@@ -6,7 +6,7 @@
     background-color: black;
     border-style: solid;
     max-width: 500px;
-    width: 98%;
+    width: 95%;
     margin: auto;
     margin-top: 20px;
     box-shadow: 1px 1px 5px 0px black;
@@ -17,15 +17,15 @@ div,h1,p,body{
     margin:0px;
 }
 
-th, td {
-    padding-left:25px;
+p{
+    text-indent:30px;
 }
 
 .SectionContainer{
     border-radius: 20px;
     border-width: 5px;
     max-width: 600px;
-    width:98%;
+    width:95%;
     margin:auto;
     margin-top:15px;
     margin-bottom:20px;
