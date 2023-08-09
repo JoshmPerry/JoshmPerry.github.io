@@ -94,11 +94,11 @@ function experienceHTML(){
     html+="<h1>Experience</h1><table style='margin-left:auto;margin-right:auto;border-spacing:0 15px'>"
     html+="<tr><th style='width:120px;vertical-align:top'><h3>SIBOR</h3><p style='text-indent:0px'>Research Assistant</p></th>"
     if(window.innerWidth<590)html+="</tr><tr>"
-    html+="<td style='width:300px'><p></p></td></tr>"
+    html+="<td style='width:300px'><p>I am the sole developer for the programs to record and analyze data from our collinear fast beam spectometer. After accuracy, my main goal is to make it as intuitive and user friendly as possible.</p></td></tr>"
     
     html+="<tr><th style='width:120px;vertical-align:top'><h3>Information Technology Partner</h3><p style='text-indent:0px'>Junior Developer</p></th>"
     if(window.innerWidth<590)html+="</tr><tr>"
-    html+="<td style='width:300px'><p></p></td></tr>"
+    html+="<td style='width:300px'><p>I have had the amazing opportunity to work and learn at the same time with ITP. I learned how to inject html from JavaScript, send and recieve data from a MySQL server, and the basics of Leaflet (A Java Script maps API). I have also used what I learned from A&M in some of my work such as the AGILE development method, a smart predictor that given the last six days of orders will predict the most likely quantity, and a file organizer that transforms files of Java Script functions into an organized Excel spreadsheet.</p></td></tr>"
 
 
     return html;
