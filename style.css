@@ -33,6 +33,7 @@
     font:status-bar;
     font-size: 25px;
     align-items: center;
+    cursor: pointer;
 }
 .menu_holder{
     width:100%;
