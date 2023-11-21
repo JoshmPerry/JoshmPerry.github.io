@@ -4,5 +4,5 @@ function directToProducts(){
 }
 function directToHome(){
     console.log("Tried d=");
-    location.href="";
+    location.href="/";
 }
