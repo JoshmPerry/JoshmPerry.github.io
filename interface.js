@@ -1,4 +1,8 @@
 function directToProducts(){
     console.log("Tried d=");
-    location.href="www.mouselessmouse.com/products";
+    location.href="/products";
+}
+function directToHome(){
+    console.log("Tried d=");
+    location.href="";
 }
