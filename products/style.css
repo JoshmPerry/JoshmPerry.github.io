@@ -1,0 +1,128 @@
+/*
+
+#e2e9f0
+#d7dee4
+#2a6a96
+#525252
+*/
+.frame{
+    width: 100%;
+    height: 100%;
+    background-color: #525252;
+    border-spacing: 0px;
+    margin: 0px;
+    padding:0px;
+}
+.menu{
+    position: fixed;
+    margin:auto;
+    border-radius:0px 0px 8px 8px;
+    top:0;
+    left:0;
+    width:100%;
+    height: 66px;
+    background-color: #2a6a96;
+    display: flex;
+    align-items: center;
+
+}
+.menu_item{
+    display:flex;
+    height:60px;
+    padding: 3px;
+    padding-right: 16px;
+    padding-left: 16px;
+    font:status-bar;
+    font-size: 25px;
+    align-items: center;
+    cursor: pointer;
+}
+.menu_holder{
+    width:100%;
+    height: 66px;
+    background-color: black;
+}
+.content_holder{
+    background-color: #525252;
+    text-align: center;
+    width:100%;
+    height:100%;
+}
+.content,.contentWide{
+    background-color: #e2e9f0;
+    border-radius: 50px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:6px;
+    margin-bottom:6px;
+    padding:10px;
+    max-width: 500px;
+    height:fit-content;
+    width:95%;
+    text-align: center;
+}
+.contentWide{
+    max-width:1200px;
+}
+.product{
+    margin:auto;
+    max-width: 600px;
+    width:90%;
+    max-height: 100%;
+}
+.product_text{
+    margin:auto;
+    padding:5px;
+    max-width: 450;
+    width: 95%;
+    text-decoration: none;
+    color:black;
+    font-size: 18px;
+}
+
+.footer_holder{
+    padding: 0px;
+    width:100%;
+    height:fit-content;
+    display:flex;
+    justify-items: center;
+    background-color: #2a6a96;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.footer_item{
+    text-decoration: none;
+    color:black;
+    width:fit-content;
+    height:fit-content;
+    padding:0px;
+    margin-left: 20px;
+    margin-bottom:30px;
+}
+
+.footer_title{
+    font:message-box;
+    font-weight: 600;
+    font-size: 20px;
+    margin:20px;
+    margin-left: 0px;
+}
+
+.footer_text{
+    text-decoration: none;
+    color:black;
+    margin:0px;
+}
+
+.content:hover{
+    background-color: #d7dee4;
+}
+
+.menu_item:hover{
+    background-color: #26628b;
+}
+
+
+
+
+
