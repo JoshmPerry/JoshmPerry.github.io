@@ -67,7 +67,8 @@
 }
 .product{
     margin:auto;
-    max-width: 100%;
+    max-width: 600px;
+    width:90%;
     max-height: 100%;
 }
 .product_text{
@@ -75,6 +76,9 @@
     padding:5px;
     max-width: 450;
     width: 95%;
+    text-decoration: none;
+    color:black;
+    font-size: 18px;
 }
 
 .footer_holder{
