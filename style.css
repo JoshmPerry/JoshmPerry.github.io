@@ -10,6 +10,8 @@
     height: 100%;
     background-color: #525252;
     border-spacing: 0px;
+    margin: 0px;
+    padding:0px;
 }
 .menu{
     position: fixed;
@@ -76,6 +78,7 @@
 }
 
 .footer_holder{
+    padding: 0px;
     width:100%;
     height:fit-content;
     display:flex;
@@ -85,6 +88,8 @@
 }
 
 .footer_item{
+    text-decoration: none;
+    color:black;
     width:fit-content;
     height:fit-content;
     padding:0px;
@@ -101,8 +106,9 @@
 }
 
 .footer_text{
+    text-decoration: none;
+    color:black;
     margin:0px;
-
 }
 
 .content:hover{
