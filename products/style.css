@@ -79,6 +79,16 @@ html,body{
     width:90%;
     max-height: 100%;
 }
+.product_name{
+    margin:auto;
+    padding:5px;
+    max-width: 450;
+    width: 95%;
+    text-decoration:none;
+    font-weight: 600;
+    color:black;
+    font-size: 25px;
+}
 .product_text{
     margin:auto;
     padding:5px;
