@@ -67,7 +67,7 @@ html,body{
     width:auto;
     height:fit-content;
     display:flex;
-    animation: scrollTop 35s linear infinite
+    animation: scrollTop 22.5s linear infinite
 }
 
 .slide{
@@ -75,6 +75,15 @@ html,body{
     height:400px;
     width:800px;
     align-items: center;
+}
+
+.Fbutton{
+    text-align: center;
+}
+
+.Fbutton_text{
+    position:absolute;
+    text-align: center;
 }
 
 .content_holder{
@@ -85,14 +94,15 @@ html,body{
 }
 
 
-.contentRight,.contentLeft{
+.contentRight,.contentLeft,.contentCenter{
     background-color: #e2e9f0;
     border-radius: 50px;
     margin-left:auto;
     margin-right:auto;
     padding:10px;
     height:fit-content;
-    width:70%;
+    width:60%;
+    min-width: 800px;
     text-align: center;
 }
 
@@ -113,13 +123,19 @@ html,body{
     padding-left:auto;
 }
 
-.contentR,.contentL{
+.contentCenter{
+    text-align:center;
+    margin:auto;
+}
+
+.content{
     text-align:center;
     width:fit-content;
     height:fit-content;
     min-width: 700px;/*Will need to be changed*/
     min-height: 350px;
     padding:auto;
+    margin: auto;
 }
 .contentR{
     margin-left:0;
@@ -140,6 +156,40 @@ html,body{
     text-decoration: none;
     color:black;
     font-size: 18px;
+}
+
+.footer_holder{
+    padding: 0px;
+    width:100%;
+    height:fit-content;
+    display:flex;
+    justify-items: center;
+    background-color: #2a6a96;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.footer_item{
+    text-decoration: none;
+    color:black;
+    width:fit-content;
+    height:fit-content;
+    padding:0px;
+    margin-left: 20px;
+    margin-bottom:30px;
+}
+
+.footer_title{
+    font:message-box;
+    font-weight: 600;
+    font-size: 20px;
+    margin:20px;
+    margin-left: 0px;
+}
+
+.footer_text{
+    text-decoration: none;
+    color:black;
+    margin:0px;
 }
 
 .hiddenL,.hiddenR,.hidden{
@@ -170,6 +220,14 @@ html,body{
         transform: translateX(calc(-7*800px));
     }
 }
+@keyframes scrollBottom {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-3*800px));
+    }
+}
 
 @media screen and (max-width:900px){
     .contentRight,.contentLeft{
@@ -186,6 +244,10 @@ html,body{
     }
 
 
+}
+
+.Fbutton:hover{
+    filter: brightness(80%);
 }
 
 .menu_item:hover{
