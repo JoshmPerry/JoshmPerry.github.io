@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouseless Mouse</title>
+    <link rel="icon" type="image/svg+xml" href="drawables/MouselessMouse.png">
+    <link rel="shortcut icon" href="drawables/MouselessMouse.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="drawables/MouselessMouse.png">
+    <meta name="description" content="Mouseless Mouse">
+    <meta name="keywords" content="MouselessMouse, mouse">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script defer src="itemLoader.js"></script>
+    <script defer src="navigator.js"></script>
+    <!--defer means that it gets loaded after all the body elements get loaded-->
+</head>
+<body>
+   <table class="frame" cellspacing="0" cellpadding="0">
+    <tr class="menu_holder"></tr>
+    <tr><td class="content_holder">
+        
+        <div class="contentContainer">
+            <div class="slideShow" style="animation: scrollTop 22.5 linear infinite">
+            <div class="slide">
+                <img class="slide" src="drawables/mouse0v1.gif" width="100%"></img>
+            </div>
+            <div class="slide">
+                <img class="slide" src="drawables/mouse0v1.1.gif" width="100%"></img>
+            </div>
+            <div class="slide">
+                <img class="slide" src="drawables/mouse0v1.2.gif" width="100%"></img>
+            </div>
+            <div class="slide">
+                <img class="slide" src="drawables/mouse0v1.3.gif" width="100%"></img>
+            </div>
+            <div class="slide">
+                <img class="slide" src="drawables/mouse0v2.gif" width="100%"></img>
+            </div>
+            <div class="slide">
+                <img class="slide" src="drawables/mouse0v2.1.gif" width="100%"></img>
+            </div>
+            <div class="slide">
+                <img class="slide" src="drawables/mouse0v2.2.gif" width="100%"></img>
+            </div>
+            <div class="slide">
+                <img class="slide" src="drawables/mouse0v1.gif" width="100%"></img>
+            </div>
+            <div class="slide">
+                <img class="slide" src="drawables/mouse0v1.1.gif" width="100%"></img>
+            </div>
+            <div class="slide">
+                <img class="slide" src="drawables/mouse0v1.2.gif" width="100%"></img>
+            </div>
+            </div>
+        </div>
+        <div class="contentContainer">
+            <div class="contentRight hiddenR">
+                <div class="content contentR">
+                    <div class="largeText">
+                        What is Mouseless Mouse?
+                    </div>
+                    <div class="normText">
+                        What is Mouseless Mouse?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contentContainer">
+            <div class="contentLeft hiddenL">
+                <div class="content contentL">
+                    <div class="largeText">
+                        Development Stage
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contentContainer">
+            <div class="contentCenter hidden">
+                <div class="content">
+                    <div class="largeText">
+                        Interest Form
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="contentContainer Fbutton" onclick="directToProducts()">
+            <div class="slideShow" style="animation: scrollBottom 7.5s linear infinite">
+                <div class="slide">
+                    <img class="slide" src="drawables/glove0.jpg" width="100%"></img>
+                </div>
+                <div class="slide">
+                    <img class="slide" src="drawables/glove1.jpg" width="100%"></img>
+                </div>
+                <div class="slide">
+                    <img class="slide" src="drawables/glove2.jpg" width="100%"></img>
+                </div>
+                <div class="slide">
+                    <img class="slide" src="drawables/glove0.jpg" width="100%"></img>
+                </div>
+                <div class="slide">
+                    <img class="slide" src="drawables/glove1.jpg" width="100%"></img>
+                </div>
+                <div class="slide">
+                    <img class="slide" src="drawables/glove2.jpg" width="100%"></img>
+                </div>
+            </div>
+            <div class="Fbutton_text">
+                <div class="largeText" style="font-weight: bold;">Products</div>
+            </div>
+        </div>
+    </td></tr>
+    <tr><td class="footer_holder">
+        <div class="footer_item"> 
+            <p class="footer_title">
+                Email:
+            </p>
+            <a class="footer_text" href="mailto:joshmperry@tamu.edu">
+                joshmperry@tamu.edu
+            </a>
+        </div>
+</td></tr>
+   </table>
+   <div class="menu">
+        <div class="menu_item" style="padding-left:10px;border-radius:0px 0px 0px 8px;" onclick="directToHome()">
+            <img src="drawables/MouselessMouse.png" width="50" height="50"></img>
+        </div>
+        <div class="menu_item" onclick="directToHome()">
+            Home
+        </div>
+        <div class="menu_item" onclick="directToProducts()">
+            Products
+        </div>
+   </div>
+    <script>
+    document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
+    </script>
+</body>
