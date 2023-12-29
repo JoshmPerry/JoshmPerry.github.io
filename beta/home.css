@@ -59,6 +59,7 @@ html,body{
     display:grid;
     place-items:center;
     margin:auto;
+    margin-left: 0px;
     margin-top:6px;
     margin-bottom:6px;
 }
