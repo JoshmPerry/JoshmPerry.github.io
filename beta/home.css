@@ -53,7 +53,7 @@ html,body{
 }
 
 .contentContainer{
-    width:calc((100vw - var(--scrollbar-width)));
+    width:calc((800px - var(--scrollbar-width)));
     height:fit-content;
     overflow:hidden;
     display:grid;
