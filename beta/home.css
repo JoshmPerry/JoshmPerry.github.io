@@ -53,10 +53,10 @@ html,body{
 }
 
 .contentContainer{
-    width:calc((800px - var(--scrollbar-width)));
+    width:calc((100vw - var(--scrollbar-width)));
     height:fit-content;
-    /*overflow:hidden;
-    */
+    overflow:hidden;
+    
     display:grid;
     place-items:center;
     margin:auto;
@@ -91,7 +91,8 @@ html,body{
 .content_holder{
     background-color: #525252;
     text-align: center;
-    width:100%;
+    width:10vw;
+    min-height:100vh;
     height:100%;
 }
 
