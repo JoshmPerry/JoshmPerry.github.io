@@ -6,8 +6,16 @@ html,body{
     height: 100%;
     
 }
-.frame{
+
+.fullscreen{
     width: calc((100vw - var(--scrollbar-width)));
+}
+
+.fullscreenPhone{
+    width: 100vw;
+}
+
+.frame{
     height: 100%;
     background-color: #525252;
     border-spacing: 0px;
@@ -53,7 +61,6 @@ html,body{
 }
 
 .contentContainer{
-    width:calc((100vw - var(--scrollbar-width)));
     height:fit-content;
     overflow:hidden;
     
@@ -70,8 +77,8 @@ html,body{
     width:auto;
     height:fit-content;
     display:flex;
-    /*animation: scrollTop 22.5s linear infinite
-    */
+    animation: scrollTop 22.5s linear infinite
+    
 }
 
 .slide{

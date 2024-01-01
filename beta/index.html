@@ -12,16 +12,17 @@
 
     <link rel="stylesheet" href="home.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.9.0/is.min.js"></script>
     <script defer src="itemLoader.js"></script>
     <script defer src="navigator.js"></script>
     <!--defer means that it gets loaded after all the body elements get loaded-->
 </head>
 <body>
-   <table class="frame" cellspacing="0" cellpadding="0">
+   <table class="frame fullscreen" cellspacing="0" cellpadding="0">
     <tr class="menu_holder"></tr>
     <tr><td class="content_holder">
         
-        <div class="contentContainer">
+        <div class="contentContainer fullscreen">
             <div class="slideShow" style="animation: scrollTop 22.5 linear infinite">
             <div class="slide">
                 <img class="slide" src="drawables/mouse0v1.gif" width="100%"></img>
@@ -55,8 +56,8 @@
             </div>
             </div>
         </div>
-        <div class="contentContainer">
-            <div class="contentRight">
+        <div class="contentContainer fullscreen">
+            <div class="contentRight hiddenR">
                 <div class="content contentR">
                     <div class="largeText">
                         What is Mouseless Mouse?
@@ -67,8 +68,8 @@
                 </div>
             </div>
         </div>
-        <div class="contentContainer">
-            <div class="contentLeft">
+        <div class="contentContainer fullscreen">
+            <div class="contentLeft hiddenL">
                 <div class="content contentL">
                     <div class="largeText">
                         Development Stage
@@ -76,8 +77,8 @@
                 </div>
             </div>
         </div>
-        <div class="contentContainer">
-            <div class="contentCenter">
+        <div class="contentContainer fullscreen">
+            <div class="contentCenter hidden">
                 <div class="content">
                     <div id="testGround" class="largeText">
                         Interest Form
@@ -86,7 +87,7 @@
             </div>
             
         </div>
-        <div class="contentContainer Fbutton" onclick="directToProducts()">
+        <div class="contentContainer Fbutton fullscreen" onclick="directToProducts()">
             <div class="slideShow" style="animation: scrollBottom 7.5s linear infinite">
                 <div class="slide">
                     <img class="slide" src="drawables/glove0.jpg" width="100%"></img>
@@ -136,6 +137,10 @@
    </div>
     <script>
     document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
+    if(is.mobile()){
+        $('.fullscreen').addClass('.fullscreenPhone');
+        $('.fullscreenPhone').removeClass('fullscreen');
+    }
     document.getElementById("testGround").innerHTML="inner width: "+window.innerWidth+", document.documentElement.clientWidth: "+document.documentElement.clientWidth;
     </script>
 </body>
