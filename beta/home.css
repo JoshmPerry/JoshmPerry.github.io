@@ -55,7 +55,8 @@ html,body{
 .contentContainer{
     width:calc((800px - var(--scrollbar-width)));
     height:fit-content;
-    overflow:hidden;
+    /*overflow:hidden;
+    */
     display:grid;
     place-items:center;
     margin:auto;
