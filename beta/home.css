@@ -70,7 +70,8 @@ html,body{
     width:auto;
     height:fit-content;
     display:flex;
-    animation: scrollTop 22.5s linear infinite
+    /*animation: scrollTop 22.5s linear infinite
+    */
 }
 
 .slide{
