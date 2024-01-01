@@ -208,6 +208,7 @@ html,body{
     opacity:0;
     filter: blur(10px);
     transition: all 1s;
+    transform: translateY(100%);
 }
 .hiddenL{
     transform: translateX(-100%);
@@ -241,8 +242,8 @@ html,body{
     }
 }
 
-@media screen and (max-width:900px){
-    .contentRight,.contentLeft{
+@media screen and (max-width:1000px){
+    .contentRight,.contentLeft,.contentCenter{
         width:95%;
         margin-left:auto;
         margin-right:auto;
