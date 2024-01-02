@@ -157,7 +157,6 @@ html,body{
     min-height: 350px;
     padding:auto;
     margin: auto;
-    margin-top:
 }
 .contentR{
     margin-left:0;
@@ -248,7 +247,7 @@ html,body{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(-8*800px));
+        transform: translateX(calc(-7*800px));
     }
 }
 @keyframes scrollBottom {
@@ -256,7 +255,7 @@ html,body{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(-4*800px));
+        transform: translateX(calc(-3*800px));
     }
 }
 
@@ -265,7 +264,7 @@ html,body{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(-8*600px));
+        transform: translateX(calc(-7*600px));
     }
 }
 @keyframes scrollBottomPhone {
@@ -273,7 +272,7 @@ html,body{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(-4*600px));
+        transform: translateX(calc(-3*600px));
     }
 }
 
