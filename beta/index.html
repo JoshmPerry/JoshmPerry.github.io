@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="drawables/MouselessMouse.png">
     <link rel="shortcut icon" href="drawables/MouselessMouse.png"/>
     <link rel="shortcut icon" type="image/x-icon" href="drawables/MouselessMouse.png">
-    <meta name="description" content="Mouseless Mouse">
+    <meta name="description" content="The Mouseless Mouse Homepage">
     <meta name="keywords" content="MouselessMouse, mouse">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
@@ -15,12 +15,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.9.0/is.min.js"></script>
     <script defer src="itemLoader.js"></script>
     <script defer src="navigator.js"></script>
+    <script defer src="mobileConverter.js"></script>
     <!--defer means that it gets loaded after all the body elements get loaded-->
 </head>
 <body>
    <table class="frame fullscreen" cellspacing="0" cellpadding="0">
     <tr class="menu_holder"></tr>
-    <tr><td class="content_holder">
+    <tr><td class="content_holder fullscreen">
         
         <div class="contentContainer fullscreen">
             <div id="topSlides" class="slideShow">
@@ -146,14 +147,4 @@
             Products
         </div>
    </div>
-    <script>
-    document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
-    if(is.mobile()){
-        $('.fullscreen').addClass('fullscreenPhone');
-        $('.fullscreenPhone').removeClass('fullscreen');
-        $('.slide').addClass('slidePhone');
-        $('#topSlides').addClass('slideShowPhone');
-        $('#bottomSlides').css("animation","scrollBottomPhone 7.5s linear infinite");
-    }
-    </script>
 </body>
