@@ -23,7 +23,7 @@
     <tr><td class="content_holder">
         
         <div class="contentContainer fullscreen">
-            <div class="slideShow" style="animation: scrollTop 22.5 linear infinite">
+            <div id="topSlides" class="slideShow">
             <div class="slide">
                 <img class="slide" src="drawables/mouse0v1.gif" width="100%"></img>
             </div>
@@ -141,7 +141,8 @@
         $('.fullscreen').addClass('fullscreenPhone');
         $('.fullscreenPhone').removeClass('fullscreen');
         $('.slide').addClass('slidePhone');
-        $('.slidePhone').addClass('slide');
+        $('#topSlides').addClass('slideShowPhone');
+        $('#topSlides').css("animation","scrollBottomPhone 7.5s linear infinite");
     }
     document.getElementById("testGround").innerHTML="inner width: "+window.innerWidth+", document.documentElement.clientWidth: "+document.documentElement.clientWidth;
     </script>
