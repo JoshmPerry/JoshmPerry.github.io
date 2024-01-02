@@ -8,8 +8,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="drawables/MouselessMouse.png">
     <meta name="description" content="Mouseless Mouse">
     <meta name="keywords" content="MouselessMouse, mouse">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
     <link rel="stylesheet" href="home.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.9.0/is.min.js"></script>
@@ -109,7 +109,7 @@
                 </div>
             </div>
             <div class="Fbutton_text">
-                <div class="largeText" style="font-weight: bold;">Products</div>
+                <div class="largeText outlinedText" style="font-size:50px">Products</div>
             </div>
         </div>
     </td></tr>
@@ -140,6 +140,8 @@
     if(is.mobile()){
         $('.fullscreen').addClass('fullscreenPhone');
         $('.fullscreenPhone').removeClass('fullscreen');
+        $('.slide').addClass('slidePhone');
+        $('.slidePhone').addClass('slide');
     }
     document.getElementById("testGround").innerHTML="inner width: "+window.innerWidth+", document.documentElement.clientWidth: "+document.documentElement.clientWidth;
     </script>

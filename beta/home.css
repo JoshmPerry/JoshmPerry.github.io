@@ -88,6 +88,13 @@ html,body{
     align-items: center;
 }
 
+.slidePhone{
+    display:flex;
+    height:200px;
+    width:400px;
+    align-items: center;
+}
+
 .Fbutton{
     text-align: center;
 }
@@ -168,6 +175,13 @@ html,body{
     text-decoration: none;
     color:black;
     font-size: 18px;
+}
+
+.outlinedText{
+    font-weight: bold;
+    color:white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
 }
 
 .footer_holder{
