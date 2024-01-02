@@ -1,12 +1,12 @@
 function directToProducts(){
-    location.href="beta/products";
+    location.href="/beta/products";
 }
 function directToHome(){
-    location.href="beta/";
+    location.href="/beta/";
 }
 function directToBasic(){
-    location.href="beta/products/basic"
+    location.href="/beta/products/basic"
 }
 function directToPro(){
-    location.href="beta/products/pro"
+    location.href="/beta/products/pro"
 }
