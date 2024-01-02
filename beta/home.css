@@ -157,6 +157,7 @@ html,body{
     min-height: 350px;
     padding:auto;
     margin: auto;
+    margin-top:
 }
 .contentR{
     margin-left:0;
@@ -247,7 +248,7 @@ html,body{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(-7*800px));
+        transform: translateX(calc(-8*800px));
     }
 }
 @keyframes scrollBottom {
@@ -264,7 +265,7 @@ html,body{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(-7*600px));
+        transform: translateX(calc(-8*600px));
     }
 }
 @keyframes scrollBottomPhone {
