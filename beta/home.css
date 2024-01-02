@@ -168,9 +168,10 @@ html,body{
 }
 
 .largeText{
+    margin:10px;
     text-decoration: none;
     color:black;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .normText{
@@ -254,7 +255,7 @@ html,body{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(-3*800px));
+        transform: translateX(calc(-4*800px));
     }
 }
 
@@ -271,7 +272,7 @@ html,body{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(-3*600px));
+        transform: translateX(calc(-4*600px));
     }
 }
 
