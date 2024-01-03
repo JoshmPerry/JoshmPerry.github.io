@@ -83,7 +83,7 @@ html,body{
 }
 
 .slideShowPhone{
-    animation: scrollTop 22.5s linear infinite
+    animation: scrollTopPhone 22.5s linear infinite
 }
 
 .slide{
