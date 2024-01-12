@@ -17,6 +17,7 @@
     <script defer src="../navigator.js"></script>
     <script defer src="../mobileConverter.js"></script>
     <script defer src="three.js"></script>
+    <script defer src="FlyControls.js"></script>
     <script defer src="sceneHandler.js"></script>
 </head>
 <body>
@@ -25,21 +26,11 @@
         <tr><td class="content_holder fullscreen">
 
             
-            <canvas id="glcanvas" width="640" height="480" onclick="zoom()"></canvas>
+            <canvas style="position:absolute;top:0;left:0;"id="glcanvas" width="900" height="480" onclick="zoom()"></canvas>
 
 
 </td></tr>
 
-<tr><td class="footer_holder">
-    <div class="footer_item"> 
-        <p class="footer_title">
-            Email:
-        </p>
-        <a class="footer_text" href="mailto:joshmperry@tamu.edu">
-            joshmperry@tamu.edu
-        </a>
-    </div>
-</td></tr>
 
 </table>
 <div class="menu">
@@ -53,6 +44,13 @@
     Products
 </div>
 </div>
+<script>
+    document.querySelector("#glcanvas").setAttribute("width",(window.innerWidth) + "px");
+    document.querySelector("#glcanvas").setAttribute("height",(window.innerHeight) + "px");
+    console.log(window.innerWidth)
+</script>
+
+
 </body>
 
 
