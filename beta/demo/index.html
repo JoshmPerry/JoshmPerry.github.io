@@ -1,11 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>WebGL Demo</title>
-<script src="gl-matrix-min.js"></script>
-<script defer src="3dviewer.js"></script>
-
+    <meta charset="UTF-8">
+    <title>Mouseless Mouse</title>
+    <link rel="icon" type="image/svg+xml" href="../drawables/MouselessMouse.png">
+    <link rel="shortcut icon" href="../drawables/MouselessMouse.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../drawables/MouselessMouse.png">
+    <meta name="description" content="Mouseless Mouse">
+    <meta name="keywords" content="MouselessMouse, mouse">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <link rel="stylesheet" href="../home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.9.0/is.min.js"></script>
+    <script defer src="../itemLoader.js"></script>
+    <script defer src="../navigator.js"></script>
+    <script defer src="../mobileConverter.js"></script>
+    <script defer src="three.js"></script>
+    <script defer src="sceneHandler.js"></script>
 </head>
-
 <body>
-<canvas id="glcanvas" width="640" height="480" onclick="drawScene()"></canvas>
+    <table class="frame fullscreen" cellspacing="0" cellpadding="0">
+        <tr class="menu_holder"></tr>
+        <tr><td class="content_holder fullscreen">
+
+            
+            <canvas id="glcanvas" width="640" height="480" onclick="zoom()"></canvas>
+
+
+</td></tr>
+
+<tr><td class="footer_holder">
+    <div class="footer_item"> 
+        <p class="footer_title">
+            Email:
+        </p>
+        <a class="footer_text" href="mailto:joshmperry@tamu.edu">
+            joshmperry@tamu.edu
+        </a>
+    </div>
+</td></tr>
+
+</table>
+<div class="menu">
+<div class="menu_item" style="padding-left:10px;border-radius:0px 0px 0px 8px;" onclick="directToHome()">
+    <img src="../drawables/MouselessMouse.png" width="50" height="50"></img>
+</div>
+<div class="menu_item" onclick="directToHome()">
+    Home
+</div>
+<div class="menu_item" onclick="directToProducts()">
+    Products
+</div>
+</div>
 </body>
+
+
