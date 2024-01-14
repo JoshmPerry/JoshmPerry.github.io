@@ -55,7 +55,7 @@ animate();
 
 function logMovement(event) {
   if(clickedIn){
-      console.log("camera",camera.rotation.x,", ",camera.rotation.y);
+      //console.log("camera",camera.rotation.x/Math.PI,", ",camera.rotation.y/Math.PI);
   if(camera.rotation.x-event.movementY*sensitivity<Math.PI/2 && camera.rotation.x-event.movementY*sensitivity>-Math.PI/2)
   camera.rotation.x-=event.movementY*sensitivity;
   camera.rotation.y-=event.movementX*sensitivity;
@@ -67,7 +67,7 @@ function logMovement(event) {
 function logScroll(event){
   if(clickedIn){
       camera.position.x-=Math.sin(camera.rotation.y)*Math.cos(camera.rotation.x)*event.wheelDelta/5;
-      camera.position.y+=Math.cos(camera.rotation.y)*Math.sin(camera.rotation.x)*event.wheelDelta/5;
+      camera.position.y+=Math.sin(camera.rotation.x)*event.wheelDelta/5;
       camera.position.z-=Math.cos(camera.rotation.y)*Math.cos(camera.rotation.x)*event.wheelDelta/5;
   }
 }

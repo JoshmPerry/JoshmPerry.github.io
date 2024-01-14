@@ -1,4 +1,4 @@
-
+ranLocal=location.href.includes("index.html");
 
 function loadSphere(scene,radi,x,y,z,mesh){
     var object=new THREE.Mesh(new THREE.SphereGeometry(radi),mesh);
@@ -14,7 +14,13 @@ function loadRandomSpheres(scene,number,radi,rangeLimit,mesh){
 }
 
 function loadStars(scene,number,radi){
-    var star = new THREE.TextureLoader().load('assets/moon.jpg');
-    var white = new THREE.MeshStandardMaterial({map:star,color:0xffffff});
+    var star;
+    var white;
+    if(ranLocal){
+        white= new THREE.MeshStandardMaterial({color:0xffffff});
+    }else{
+        star= new THREE.TextureLoader().load('assets/moon.jpg');
+        white= new THREE.MeshStandardMaterial({map:star,color:0xffffff});
+    } 
     loadRandomSpheres(scene,number,radi,1500,white);
 }
