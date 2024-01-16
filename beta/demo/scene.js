@@ -189,7 +189,7 @@ function loadScene(scene,animationGroup){
     loadScreen(scene,"Mouseless\nMouse");
 
 
-    loadBackground(scene,"assets/space.jpg");
+    //loadBackground(scene,"assets/space.jpg");
 
     loadPlatform(scene,animationGroup);
 
