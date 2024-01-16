@@ -1,5 +1,6 @@
 clickedIn=false;
 sensitivity=0.01;
+var time=0;
 const scene = new THREE.Scene();
 
 camera = new THREE.PerspectiveCamera(75,document.querySelector('#glcanvas').width/document.querySelector('#glcanvas').height,.1,1000);
@@ -12,8 +13,8 @@ renderer.setSize(document.querySelector('#glcanvas').width,document.querySelecto
 renderer.setPixelRatio(window.devicePixelRatio);
 camera.position.setZ(50);
 
-
-loadScene(scene);
+var animationGroup=[];
+loadScene(scene,animationGroup);
 
 
 
@@ -30,6 +31,18 @@ function clickCanvas(){
 
 function animate() {
     requestAnimationFrame(animate);
+    time+=0.005;
+    animationGroup.forEach((element)=>{
+      element.object.rotation.x+=element.rotation.x;
+      element.object.rotation.y+=element.rotation.y;
+      element.object.rotation.z+=element.rotation.z;
+      if(element.changePos){
+        element.object.position.x=Math.cos(time)*element.position.x;
+        element.object.position.y=Math.sin(time)*element.position.y;
+        element.object.position.z=Math.sin(time)*element.position.z;
+      }
+      
+    })
 
     renderer.render(scene, camera);
 }
@@ -71,7 +84,6 @@ document.addEventListener("pointerlockchange", async () => {
 });
 
 window.onresize=() =>{
-  console.log("hi")
   document.querySelector("#glcanvas").setAttribute("width",(window.innerWidth) + "px");
   document.querySelector("#glcanvas").setAttribute("height",(window.innerHeight) + "px");
   renderer.setSize(document.querySelector('#glcanvas').width,document.querySelector('#glcanvas').height);

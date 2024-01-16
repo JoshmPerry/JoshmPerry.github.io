@@ -33,6 +33,16 @@ function loadBackground(scene,image){
     }
 }
 
+function generateAnimationObject(rotx,roty,rotz,rotPos,posx,posy,posz){
+    var object = {
+        object:0,
+        changePos:rotPos,
+        rotation:{x:rotx,y:roty,z:rotz},
+        position:{x:posx,y:posy,z:posz}
+    };
+    return object;
+}
+
 function generateText(text){
     //Dummy Canvas
     var textCanvas = document.createElement("canvas");
@@ -95,32 +105,94 @@ function loadText(scene,text,pointA,pointB){
 
 function loadScreen(scene,text){
     var textData = generateText(text);
-    var pointA={x:-50,y:25,z:0};
-    var pointB={x:50,y:75,z:0};
+    var pointA={x:-50,y:25,z:-20};
+    var pointB={x:50,y:75,z:-20};
     loadText(scene,textData,pointA,pointB);
     var geometry = new THREE.BoxGeometry(pointB.x-pointA.x,pointB.y-pointA.y,2.5);
     var edges = new THREE.EdgesGeometry(geometry);
     var lines = new THREE.LineSegments(edges,new THREE.LineBasicMaterial({color:0x2a6a96}));
+    lines.position.set(0,0,-20);
     scene.add(lines);
-    var rectLight = new THREE.RectAreaLight(0xffffff,1,pointB.x-pointA.x,pointB.y-pointA.y);
-    rectLight.position.set(0,0,5);
-    rectLight.lookAt(0,0,0);
+    var rectLight = new THREE.RectAreaLight(0xffffff,.5,pointB.x-pointA.x,pointB.y-pointA.y);
+    rectLight.position.set(0,0,-15);
+    rectLight.lookAt(0,0,-20);
     scene.add(rectLight);
 }
 
-function loadPlatform(scene){
+function loadPlatform(scene,animationGroup){
+    var tgeometry = new THREE.CylinderGeometry(72,75,4,64);
+    var tmaterial = new THREE.MeshStandardMaterial({color:0x2a6a96});
+    var topCylinder = new THREE.Mesh(tgeometry,tmaterial);
+
+    topCylinder.position.set(0,-70,0);
+    var bgeometry = new THREE.CylinderGeometry(78,50,20,32);
+    var bmaterial = new THREE.MeshStandardMaterial({color:0x525252});
+    var bottomCylinder = new THREE.Mesh(bgeometry,bmaterial);
+    bottomCylinder.position.set(0,-82,0);
+    scene.add(topCylinder,bottomCylinder);
+
+    var tgeometry = new THREE.CylinderGeometry(4,1,4,64);
+    var tmaterial = new THREE.MeshStandardMaterial({color:0x2a6a96});
+    var topCylinder = new THREE.Mesh(tgeometry,tmaterial);
+    topCylinder.position.set(0,-364,0);
+    var bgeometry = new THREE.CylinderGeometry(10,5,280,32);
+    var bmaterial = new THREE.MeshStandardMaterial({color:0x525252});
+    var bottomCylinder = new THREE.Mesh(bgeometry,bmaterial);
+    bottomCylinder.position.set(0,-222,0);
+    scene.add(topCylinder,bottomCylinder);
+
+
+    var tgeometry = new THREE.TorusGeometry(35,5,24,64);
+    var tmaterial = new THREE.MeshStandardMaterial({color:0x2a6a96});
+    var topCylinder = new THREE.Mesh(tgeometry,tmaterial);
+    topCylinder.rotation._order="ZYX";
+    topCylinder.position.set(0,-180,0);
+    topCylinder.rotation.set(Math.PI/2-0.35,0,0);
+    var tring = generateAnimationObject(0,0.05,0,false);
+    tring.object=topCylinder;
+    animationGroup.push(tring);
+    scene.add(topCylinder);
+
+    var tgeometry = new THREE.TorusGeometry(25,5,24,64);
+    var topCylinder = new THREE.Mesh(tgeometry,tmaterial);
+    topCylinder.rotation._order="ZYX";
+    topCylinder.position.set(0,-300,0);
+    topCylinder.rotation.set(Math.PI/2-0.25,0,0);
+    var tring = generateAnimationObject(0,-0.04,0,false);
+    tring.object=topCylinder;
+    animationGroup.push(tring);
+    scene.add(topCylinder);
 
 }
 
-function loadScene(scene){
+function loadLighting(scene,animationGroup){
+    var alight=new THREE.AmbientLight(0xffffff);
+    alight.intensity=0.005;
+    scene.add(alight);
+
+    var plight = new THREE.PointLight(0xffffff);
+    plight.intensity=500000;
+    var animation = generateAnimationObject(0,0,0,true,2000,2000,500);
+    animation.object=plight;
+    scene.add(plight);
+    animationGroup.push(animation);
+    var plight = new THREE.PointLight(0xffffff);
+    plight.intensity=200000;
+    var animation = generateAnimationObject(0,0,0,true,-2000,-2000,800);
+    animation.object=plight;
+    scene.add(plight);
+    animationGroup.push(animation);
+}
+
+function loadScene(scene,animationGroup){
     loadStars(scene,500,2);
     loadScreen(scene,"Mouseless\nMouse");
 
 
-    loadBackground(scene,"assets/space");
+    loadBackground(scene,"assets/space.jpg");
 
-    alight=new THREE.AmbientLight(0xffffff);
-    alight.intensity=.005;
-    scene.add(alight);
+    loadPlatform(scene,animationGroup);
+
+    loadLighting(scene,animationGroup);
 
 }
