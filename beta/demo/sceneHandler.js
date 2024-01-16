@@ -16,16 +16,20 @@ camera.position.setZ(50);
 
 var mesh=new THREE.Mesh(new THREE.TorusGeometry(10,5,16,100),new THREE.MeshStandardMaterial({color: 0xFF6347,}));
 var box=new THREE.Mesh(new THREE.BoxGeometry(25,25,25),new THREE.MeshBasicMaterial({color: 0xFF6347,}));
-loadStars(scene,500,2);
+
+loadScene(scene);
+
+
+
 box.position.set(50,0,0);
 scene.add(
     mesh,box
     );
 plight=new THREE.PointLight(0xffffff);
-plight.intensity=100;
+plight.intensity=10000;
 alight=new THREE.AmbientLight(0xffffff);
-alight.intensity=1;
-plight.position.set(30,5,5);
+alight.intensity=.005;
+plight.position.set(200,-100,50);
 scene.add(plight,alight,new THREE.PointLightHelper(plight));
 
 function clickCanvas(){
