@@ -9,6 +9,7 @@ function loadSphere(scene,radi,x,y,z,mesh){
 function loadRandomSpheres(scene,number,radi,rangeLimit,mesh){
     for(let i=0;i<number;i++){
         var [x,y,z] = Array(3).fill().map(() => Math.random()*rangeLimit*2-rangeLimit);
+        if(Math.abs(x)>100 && Math.abs(y)>100 && Math.abs(z)>100)
         loadSphere(scene,radi,x,y,z,mesh);
     }
 }
@@ -25,7 +26,14 @@ function loadStars(scene,number,radi){
     loadRandomSpheres(scene,number,radi,1500,white);
 }
 
-function generateText(scene,text){
+function loadBackground(scene,image){
+    if(!ranLocal){
+        var loader = new THREE.TextureLoader();
+        scene.background = loader.load(image);
+    }
+}
+
+function generateText(text){
     //Dummy Canvas
     var textCanvas = document.createElement("canvas");
     var CnvContext = textCanvas.getContext("2d");
@@ -49,15 +57,9 @@ function generateText(scene,text){
         var curlineLength=57*lines[i].length;
         CnvContext.fillText(lines[i],(textCanvas.width-curlineLength)/2,((i+.9)*lines.length*90)/lines.length);
     }
-    console.log(textCanvas);
 
-    //tmp Plane
-    var texture=new THREE.CanvasTexture(textCanvas);
-    var planeGeometry = new THREE.PlaneGeometry(textCanvas.width,textCanvas.height);
-    var Plane = new THREE.MeshBasicMaterial({map:texture});
-    var planeMesh = new THREE.Mesh(planeGeometry,Plane);
-    //scene.add(planeMesh);
 
+    //get Text Data Points
     var textureCoords = [];
 
     var imgData = CnvContext.getImageData(0,0,textCanvas.width,textCanvas.height);
@@ -68,16 +70,57 @@ function generateText(scene,text){
             }
         }
     }
-    console.log(textureCoords);
-    var white= new THREE.MeshStandardMaterial({color:0xffffff});
-    textureCoords.forEach((element) =>{
-        loadSphere(scene,2,element.x,element.y,20,white);
+    var textData = [];
+    textData.points=textureCoords;
+    textData.width=textCanvas.width;
+    textData.height=textCanvas.height;
+    return textData;
+
+}
+
+function loadText(scene,text,pointA,pointB){
+    diffx=pointB.x-pointA.x;
+    diffy=pointB.y-pointA.y;
+    
+    diameter = Math.min(4*diffx/text.width,4*diffy/text.height);
+    var mesh=new THREE.MeshStandardMaterial({color:0xffffff,transparent:true,opacity:0.5});
+    text.points.forEach((point)=>{
+        x=pointA.x+(point.x/text.width)*diffx;
+        y=pointA.y+(point.y/text.height)*diffy;
+        z=pointA.z;
+        loadSphere(scene,diameter/2,x,y,z,mesh);
     });
+}
+
+
+function loadScreen(scene,text){
+    var textData = generateText(text);
+    var pointA={x:-50,y:25,z:0};
+    var pointB={x:50,y:75,z:0};
+    loadText(scene,textData,pointA,pointB);
+    var geometry = new THREE.BoxGeometry(pointB.x-pointA.x,pointB.y-pointA.y,2.5);
+    var edges = new THREE.EdgesGeometry(geometry);
+    var lines = new THREE.LineSegments(edges,new THREE.LineBasicMaterial({color:0x2a6a96}));
+    scene.add(lines);
+    var rectLight = new THREE.RectAreaLight(0xffffff,1,pointB.x-pointA.x,pointB.y-pointA.y);
+    rectLight.position.set(0,0,5);
+    rectLight.lookAt(0,0,0);
+    scene.add(rectLight);
+}
+
+function loadPlatform(scene){
 
 }
 
 function loadScene(scene){
     loadStars(scene,500,2);
-    generateText(scene,"Mouseless\nMouse");
+    loadScreen(scene,"Mouseless\nMouse");
+
+
+    loadBackground(scene,"assets/space");
+
+    alight=new THREE.AmbientLight(0xffffff);
+    alight.intensity=.005;
+    scene.add(alight);
 
 }

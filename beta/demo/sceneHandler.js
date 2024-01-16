@@ -10,27 +10,13 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setSize(document.querySelector('#glcanvas').width,document.querySelector('#glcanvas').height);
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.shadowMap.enabled = true;
-    		renderer.shadowMap.type = THREE.BasicShadowMap;
 camera.position.setZ(50);
 
-var mesh=new THREE.Mesh(new THREE.TorusGeometry(10,5,16,100),new THREE.MeshStandardMaterial({color: 0xFF6347,}));
-var box=new THREE.Mesh(new THREE.BoxGeometry(25,25,25),new THREE.MeshBasicMaterial({color: 0xFF6347,}));
 
 loadScene(scene);
 
 
 
-box.position.set(50,0,0);
-scene.add(
-    mesh,box
-    );
-plight=new THREE.PointLight(0xffffff);
-plight.intensity=10000;
-alight=new THREE.AmbientLight(0xffffff);
-alight.intensity=.005;
-plight.position.set(200,-100,50);
-scene.add(plight,alight,new THREE.PointLightHelper(plight));
 
 function clickCanvas(){
     if(document.pointerLockElement===document.querySelector('#glcanvas')){
@@ -44,9 +30,7 @@ function clickCanvas(){
 
 function animate() {
     requestAnimationFrame(animate);
-    mesh.rotation.x+=0.01;
-    mesh.rotation.y+=0.05;
-    mesh.rotation.z+=0.001;
+
     renderer.render(scene, camera);
 }
 
